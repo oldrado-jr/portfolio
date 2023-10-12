@@ -27,6 +27,9 @@ body * {
 
 #side-cards {
   width: min(100%, 348px);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .card {
@@ -69,6 +72,28 @@ body * {
 #profile-role {
   font-size: 13px;
   font-weight: 300;
+}
+
+#links {
+  font-size: 13px;
+  padding: 30px 40px;
+}
+
+#links a {
+  text-decoration: none;
+}
+
+#links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#links ul li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 footer {
