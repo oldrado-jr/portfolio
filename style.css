@@ -29,7 +29,7 @@ body * {
   width: min(100%, 348px);
 }
 
-.cards {
+.card {
   background: var(--bg-cards);
   border-radius: 20px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
