@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-bg-color: #22212c;
+  --text-color: #837e9f;
+  --bg-cards: #302f3d;
+  --bg-techs: #cb92b1;
+}
+
+body {
+  background: var(--body-bg-color);
+  height: 100vh;
+}
+
+body * {
+  font-family: "Merriweather Sans", sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  margin: 40px 40px 20px;
+}
+
+#side-cards {
+  width: min(100%, 348px);
+}
+
+.cards {
+  background: var(--bg-cards);
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 32px 0;
+}
+
+#profile img {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  border: 2px solid #00ff00;
+  object-fit: cover;
+}
+
+#profile-info {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#profile-name {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+#profile-role {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+footer {
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 20px;
+}
