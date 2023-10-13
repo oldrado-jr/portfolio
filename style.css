@@ -103,7 +103,9 @@ a {
   font-weight: 700;
 }
 
-#technologies {
+#technologies,
+#experiences,
+#education {
   padding: 30px 20px;
 }
 
@@ -125,11 +127,6 @@ a {
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
-}
-
-#experiences,
-#education {
-  padding: 30px 20px;
 }
 
 #experiences ul,
@@ -255,11 +252,8 @@ footer,
   list-style: none;
 }
 
-#posts ul li {
-  padding: 31px 30px 42px;
-}
-
 #posts ul li a {
+  padding: 31px 30px 42px;
   display: flex;
   gap: 20px;
 }
@@ -292,4 +286,35 @@ footer,
 footer {
   text-align: center;
   padding-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+  #container {
+    padding: 20px;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #side-cards,
+  #main-cards {
+    flex-basis: auto;
+  }
+
+  #side-cards .card:not(#profile),
+  #main-cards div.card,
+  #main-cards li.card a {
+    padding: 30px 20px;
+  }
+
+  #posts ul li a {
+    flex-direction: column;
+  }
+
+  .author-image {
+    text-align: center;
+  }
+
+  .post-keywords {
+    flex-wrap: wrap;
+  }
 }
