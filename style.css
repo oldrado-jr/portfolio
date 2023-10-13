@@ -125,6 +125,38 @@ body * {
   text-transform: uppercase;
 }
 
+#experiences {
+  padding: 30px 20px;
+}
+
+#experiences ul {
+  margin: 20px 0 0 40px;
+}
+
+#experiences ul li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+#experiences ul li div {
+  display: flex;
+  flex-direction: column;
+}
+
+#experiences .company-name {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#experiences .work-since-until {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+#experiences .work-role {
+  font-size: 12px;
+  font-weight: 400;
+}
+
 footer {
   text-align: center;
   font-size: 14px;
