@@ -125,34 +125,41 @@ body * {
   text-transform: uppercase;
 }
 
-#experiences {
+#experiences,
+#education {
   padding: 30px 20px;
 }
 
-#experiences ul {
+#experiences ul,
+#education ul {
   margin: 20px 0 0 40px;
 }
 
-#experiences ul li:not(:last-child) {
+#experiences ul li:not(:last-child),
+#education ul li:not(:last-child) {
   margin-bottom: 20px;
 }
 
-#experiences ul li div {
+#experiences ul li div,
+#education ul li div {
   display: flex;
   flex-direction: column;
 }
 
-#experiences .company-name {
+.company-name,
+.school-name {
   font-size: 14px;
   font-weight: 700;
 }
 
-#experiences .work-since-until {
+.work-since-until,
+.study-since-until {
   font-size: 12px;
   font-weight: 300;
 }
 
-#experiences .work-role {
+.work-role,
+.course-name {
   font-size: 12px;
   font-weight: 400;
 }
