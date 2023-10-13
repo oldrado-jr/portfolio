@@ -181,7 +181,8 @@ a {
 
 #my-projects a,
 .quantity-info,
-.project-main-tech-name {
+.project-main-tech-name,
+.post-published-in {
   font-size: 14px;
 }
 
@@ -244,6 +245,48 @@ footer,
   border: 2px solid var(--text-color);
   border-radius: 50%;
   background: #563d7c;
+}
+
+#recent-posts {
+  padding: 30px;
+}
+
+#posts ul {
+  list-style: none;
+}
+
+#posts ul li {
+  padding: 31px 30px 42px;
+}
+
+#posts ul li a {
+  display: flex;
+  gap: 20px;
+}
+
+.author-image img {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.post-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.post-keywords {
+  font-size: 14px;
+  margin-top: 11px;
+  display: flex;
+  gap: 10px;
 }
 
 footer {
