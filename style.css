@@ -21,14 +21,20 @@ body * {
   color: var(--text-color);
 }
 
+a {
+  text-decoration: none;
+}
+
 #container {
   padding: 40px 40px 20px;
+  display: flex;
+  gap: 60px;
 }
 
 #side-cards {
-  width: min(100%, 348px);
   display: flex;
   flex-direction: column;
+  flex-basis: 27%;
   gap: 30px;
 }
 
@@ -77,10 +83,6 @@ body * {
 #links {
   font-size: 13px;
   padding: 30px 40px;
-}
-
-#links a {
-  text-decoration: none;
 }
 
 #links ul {
@@ -161,12 +163,90 @@ body * {
 .work-role,
 .course-name {
   font-size: 12px;
-  font-weight: 400;
+}
+
+#main-cards {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 73%;
+  gap: 30px;
+}
+
+#my-projects {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#my-projects a,
+.quantity-info,
+.project-main-tech-name {
+  font-size: 14px;
+}
+
+#projects ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+#projects ul li {
+  flex: 1 1 32%;
+}
+
+#projects ul li a {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.project-name {
+  font-weight: 700;
+}
+
+footer,
+.project-description {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.project-contrib-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-contrib-details {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.project-contrib-details div,
+.project-main-tech-details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-main-tech-circle {
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  background: #563d7c;
 }
 
 footer {
   text-align: center;
-  font-size: 14px;
-  line-height: 20px;
-  margin-top: 20px;
+  padding-bottom: 20px;
 }
