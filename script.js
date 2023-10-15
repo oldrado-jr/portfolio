@@ -32,7 +32,7 @@ async function getGitHubUserRepos(user) {
   }
 }
 
-async function getGitHubLanguageColors() {
+async function getGitHubLanguagesData() {
   try {
     const endpoint =
       "https://raw.githubusercontent.com/ozh/github-colors/master/colors.json";
@@ -89,17 +89,12 @@ function renderUser(user) {
   renderUserLinks(user);
 }
 
-function renderUserRepoListItem(userRepo, languageColors) {
-  const isGitHubUserProfileRepo = userRepo.name === userRepo.owner.login;
-
-  if (isGitHubUserProfileRepo) {
-    return;
-  }
-
+function renderUserRepoListItem(userRepo, languagesData) {
   const userRepoListItem = document.createElement("li");
   userRepoListItem.classList.add("card");
 
-  const languageColor = languageColors[userRepo.language].color || "#ffffff";
+  const languageData = languagesData[userRepo.language];
+  const languageColor = (languageData && languageData.color) || "#ffffff";
 
   userRepoListItem.innerHTML = `
     <a href="${userRepo.html_url}" target="_blank">
@@ -124,10 +119,14 @@ function renderUserRepoListItem(userRepo, languageColors) {
             <span class="quantity-info">${userRepo.forks_count}</span>
           </div>
         </div>
-        <div class="project-main-tech-details">
-          <div class="project-main-tech-circle" style="background: ${languageColor};"></div>
-          <span class="project-main-tech-name">${userRepo.language}</span>
-        </div>
+        ${
+          userRepo.language
+            ? `<div class="project-main-tech-details">
+            <div class="project-main-tech-circle" style="background: ${languageColor};"></div>
+            <span class="project-main-tech-name">${userRepo.language}</span>
+          </div>`
+            : ""
+        }
       </div>
     </a>
   `;
@@ -135,9 +134,9 @@ function renderUserRepoListItem(userRepo, languageColors) {
   document.querySelector("#projects ul").appendChild(userRepoListItem);
 }
 
-function renderUserRepos(userRepos, languageColors) {
+function renderUserRepos(userRepos, languagesData) {
   userRepos.map((userRepo) => {
-    renderUserRepoListItem(userRepo, languageColors);
+    renderUserRepoListItem(userRepo, languagesData);
   });
 }
 
@@ -145,9 +144,9 @@ async function main() {
   const user = await getGitHubUser();
   renderUser(user);
 
-  const languageColors = await getGitHubLanguageColors();
+  const languagesData = await getGitHubLanguagesData();
   const userRepos = await getGitHubUserRepos(user);
-  renderUserRepos(userRepos, languageColors);
+  renderUserRepos(userRepos, languagesData);
 }
 
 document.addEventListener("DOMContentLoaded", main);
