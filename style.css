@@ -285,6 +285,16 @@ footer,
   gap: 10px;
 }
 
+#projects ul li,
+#posts ul li {
+  transition: background 0.2s;
+}
+
+#projects ul li:hover,
+#posts ul li:hover {
+  background: rgba(48, 47, 61, 0.5);
+}
+
 footer {
   text-align: center;
   padding-bottom: 20px;
