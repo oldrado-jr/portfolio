@@ -192,6 +192,9 @@ a {
 
 #projects ul li {
   flex: 1 1 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #projects ul li a {
